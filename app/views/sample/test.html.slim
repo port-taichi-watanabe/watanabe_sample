@@ -1,0 +1,17 @@
+= "PHPサンプル2-3-2"
+
+
+
+= form_tag '', :role =>'form', :method => 'post' do
+	= text_field_tag 'text1','', :id => 'test'
+	= submit_tag '送信'
+
+= @text1
+
+
+
+
+
+//form_tag リンク先、種類,何で飛ばすか？
+	text_field_tag 要素名、value、ID名
+	submit_tag ボタンに表示させる名前

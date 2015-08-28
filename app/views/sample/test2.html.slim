@@ -1,0 +1,27 @@
+= "PHPサンプル2-3-3"
+
+= form_tag '', :role =>'form', :method => 'post' do
+  .a
+	= check_box_tag 'test[]','check1'
+	= "check1"
+  .b
+	= check_box_tag 'test[]','check2'
+	= "check2"
+  .c
+	= check_box_tag 'test[]','check3'
+	= "check3"
+  .d
+	= check_box_tag 'test[]','check4'
+	= "check4"
+  .sub
+    = submit_tag '送信'
+  = @test
+
+
+//form_tag リンク先、種類,何で飛ばすか？
+  クラス名
+  	check_box_tag '要素名','値'
+
+
+  	要素に[]をつけることで配列として受け取ってくれるので
+  	コントローラー側はparams[:test]だけやっとけばいい
