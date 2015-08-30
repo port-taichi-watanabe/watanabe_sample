@@ -1,9 +1,10 @@
-= form_tag '', :role =>'form', :method => 'post' do
-  .aa
-  	= text_field_tag '', '', :placeholder => 'IDを入力してください'
-  .bb
-  	= password_field_tag '', '', :placeholder => 'パスワードを入力してください'
-  .cc
-    = password_field_tag '', '', :placeholder => 'もう一度パスワードを入力してください'
-  .dd
-    = submit_tag 'ログイン'
+= "PHPサンプル2-3-5"
+
+
+
+= form_tag '', :role =>'form', :method => 'get' do
+	= text_field_tag 'text1','', :id => 'test'
+	= submit_tag '送信'
+
+= @text1
+

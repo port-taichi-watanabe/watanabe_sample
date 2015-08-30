@@ -13,7 +13,7 @@ class SampleController < ApplicationController
   end
 
   def test4
-  	@good = "44  "
+    @text1 = params[:text1]
   end
 
   def aa(count,id)
