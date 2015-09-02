@@ -9,6 +9,14 @@ Rails.application.routes.draw do
   match 'sample3' => 'sample#test3', :via => [:post,:get]
 
   match 'sample4' => 'sample#test4', :via => [:post,:get]
+
+  match 'sample5' => 'sample#test5', :via => [:post,:get]
+
+  match 'sample6' => 'sample#test6', :via => [:post,:get]
+
+  match 'sample7' => 'sample#test7', :via => [:post,:get]
+
+  match 'sample8' => 'sample#test8', :via => [:post,:get]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

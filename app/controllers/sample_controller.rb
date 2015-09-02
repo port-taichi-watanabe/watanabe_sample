@@ -16,6 +16,11 @@ class SampleController < ApplicationController
     @text1 = params[:text1]
   end
 
+  def test5
+      @text1 = params[:id]
+      @text2 = params[:param]
+  end
+
   def aa(count,id)
   	
   end

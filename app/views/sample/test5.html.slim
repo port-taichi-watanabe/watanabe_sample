@@ -1,0 +1,13 @@
+= "PHPサンプル2-3-6"
+
+.link	
+	= link_to("リンク", {:controller =>'sample', :action => 'test5', :param => '44', :id => 12},{:method => 'get', :name => "aa", :id => "aaaaa"})
+= @text1
+br
+= @text2
+
+	
+
+	// = link_to(文字列、{パス（URLに「表示されるもの）}、{オプション,HTMLオプション})
+	// =link_to(文字列、パス)
+	//オプションは省略

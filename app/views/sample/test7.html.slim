@@ -1,0 +1,10 @@
+= "PHPサンプル2-3-5"
+
+
+
+= form_tag '', :role =>'form', :method => 'get' do
+	= text_field_tag 'text1','', :id => 'test'
+	= submit_tag '送信'
+
+= @text1
+
