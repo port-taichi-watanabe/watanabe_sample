@@ -21,6 +21,13 @@ class SampleController < ApplicationController
       @text2 = params[:param]
   end
 
+  def test6
+      @text1 = params[:text1]
+      p '======='
+      p @text1
+      p '======='
+  end
+
   def aa(count,id)
   	
   end

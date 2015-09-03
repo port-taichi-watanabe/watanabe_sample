@@ -1,10 +1,23 @@
-= "PHPサンプル2-3-5"
+= "PHPサンプル2-3-6"
 
 
 
-= form_tag '', :role =>'form', :method => 'get' do
-	= text_field_tag 'text1','', :id => 'test'
+= form_tag '', :role =>'form', :method => 'post' do
+	= text_field_tag 'text1[]','', :id => 'test'
+	br
+	= text_field_tag 'text1[]','', :id => 'test'
+	br
+	= text_field_tag 'text1[]','', :id => 'test'
+	br
+	= text_field_tag 'text1[]','', :id => 'test'
+	br
 	= submit_tag '送信'
 
-= @text1
+- @text1.each do |text|
+	br
+	= text
 
+
+
+// 要素名をコントローラーにparamsとして渡す。
+//　text_field_tag に入力したものがvalueに入って要素に渡る
