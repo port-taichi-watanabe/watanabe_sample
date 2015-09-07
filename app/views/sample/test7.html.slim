@@ -1,10 +1,27 @@
-= "PHPサンプル2-3-5"
+= "PHPサンプル2-3-8"
 
 
 
-= form_tag '', :role =>'form', :method => 'get' do
+= form_tag '', :role =>'form', :method => 'post' do
 	= text_field_tag 'text1','', :id => 'test'
+	br
+	= text_field_tag 'text2','', :id => 'test'
+	br
+	= text_field_tag 'text3','', :id => 'test'
+	br
+	= text_field_tag 'text4','', :id => 'test'
+	br
 	= submit_tag '送信'
 
-= @text1
-
+.one
+	= "1番目 = "
+	= @text1
+.two
+	= "2番目 = "
+	= @text2
+.three
+	= "3番目 = "
+	= @text3
+.for
+	= "4番目 = "
+	= @text4
