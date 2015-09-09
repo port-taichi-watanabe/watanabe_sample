@@ -2,9 +2,9 @@
 
 
 
-= form_tag '', :role =>'form', :method => 'get' do
+= form_tag '', :role =>'form', :method => 'post' do
 	= text_field_tag 'text1','', :id => 'test'
 	= submit_tag '送信'
 
-= @text1
+= @test1
 
