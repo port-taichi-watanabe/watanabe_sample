@@ -37,6 +37,9 @@ class SampleController < ApplicationController
       end
     end
   end
+  def test9
+    @array = ["one","two","three","for","five"]
+  end
 
   def aa(count,id)
   	
