@@ -40,6 +40,16 @@ class SampleController < ApplicationController
   def test9
     @array = ["one","two","three","for","five"]
   end
+  def test2_4_2
+    @form = params[:text1]
+    if request.post? then
+      if @form.blank? then
+        @test1 = "入力してください"
+      else
+        @test1 = "入力されました"
+      end
+    end
+  end
 
   def aa(count,id)
   	
