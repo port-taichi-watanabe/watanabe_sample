@@ -50,6 +50,16 @@ class SampleController < ApplicationController
       end
     end
   end
+  def test2_4_3
+    @form = params[:text1]
+    if request.post? then
+      if @form.include?("a") then
+        @test1 = "入ってます"
+      else
+        @test1 = "入ってないです"
+      end
+    end
+  end
 
   def aa(count,id)
   	
