@@ -60,6 +60,19 @@ class SampleController < ApplicationController
       end
     end
   end
+  def test2_4_4
+    @max = 10
+    @form = params[:text1]
+    if request.post? then
+      if @form.length < @max then
+        @test1 = "10文字以内です。"
+        @test2 = @form.length
+      else
+        @test1 = "error:10文字以上です。"
+        @test2 = @form.length
+      end
+    end
+  end
 
   def aa(count,id)
   	
