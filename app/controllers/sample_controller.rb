@@ -73,6 +73,26 @@ class SampleController < ApplicationController
       end
     end
   end
+  def test2_4_5
+    @form = params[:text1]
+    if request.post? then
+      if (/^\d+$/ =~ @form) then
+        @test1 = "OK"
+      else
+        @test1 = "NO"
+      end
+    end
+  end
+  def test2_4_6
+    @form = params[:text1]
+    if request.post? then
+      if (/^[0-9]+$/ =~ @form) then
+        @test1 = "OK"
+      else
+        @test1 = "NO"
+      end
+    end
+  end
 
   def aa(count,id)
   	
