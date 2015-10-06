@@ -93,8 +93,36 @@ class SampleController < ApplicationController
       end
     end
   end
+  def test2_4_7
+    @form = params[:text1]
+    if request.post? then
+      if (/^[A-Z]+$/ =~ @form) then
+        @test1 = "大文字"
+      else
+        @test1 = "小文字"
+      end
+    end
+  end
+  # def test2_4_8
+  #   @form = params[:text1]
+  #   if request.post? then
+  #     if DateTime.parse(@form) then
+  #       @test1 = "日付です"
+  #     else
+  #       @test1 = "日付じゃない"
+  #     end
+  #   end
+  # end
+  def test2_4_8
+    @form = params[:text1].to_s
+    date_ary = @form.split(/-/)      #=> ["2000", "08", "38"]
 
-  def aa(count,id)
-  	
+    if Date.valid_date?(date_ary[0].to_i, date_ary[1].to_i, date_ary[2].to_i)
+      Date.parse(@form)
+      @test1 = "日付です"
+    else
+      @test1 = "日付???"
+    end
+    #0000-00-00の形で入れる
   end
 end
